@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="KamrulObjAlert()">CLICK ME</button>
+
+    <script>   
+        function KamrulObjAlert () {
+            alert ("Welcome to MERN") // pop-up আকারে কোনো কিছু নোটিফিকেশন দিতে
+        }
+        function KamrulObjConfirm () {
+            var KmarulResult = confirm ("Do you think this blog is useful?"); // confirm হ্যা অথবা না উত্তর নেয়া হয় True / False আকারে 
+            document.write(KmarulResult); // Result দেখার জন্য এটি দেয়া হলো Optional 
+        }
+        function KamrulObjPrompt () {
+            var KmarulResult = prompt ("Enter Your Name"); // prompt এর সাহায্যে ইউজারের কাছ থেকে যে কোনো কিছুর ইনপুট নেয়া হয়
+            document.write(KmarulResult); // Result দেখার জন্য এটি দেয়া হলো Optional 
+        }
+        function KamrulObjOpen () {
+            open(); // Open a new tab
+        }
+        function KamrulObjClose () {
+            close(); // close current tab
+        }
+
+        setTimeout (function(){
+            alert ("Alert after 5 second");
+        },5000) // একটা নির্দিষ্ট সময় পর কোনো একটা ঘটনা ঘটানোর জন্য এটি ব্যবহৃত হয় 
+        // Learn More: https://www.w3schools.com/jsref/obj_window.asp
+    </script>
+</body>
+</html>
