@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="myEvent('আমাদের পেইজটি লোড')">
+
+    <button onclick="myEvent('ক্লিক করা হয়েছে')">Click me Now</button>
+    <button onmouseover="myEvent('Mouse Hover করা হয়েছে')">Mouse Hover</button>
+    <button onmouseout="myEvent('Mouse Out করা হয়েছে')">Mouse Out</button>
+
+    <br>
+    <br>
+
+    <!-- input Field এর ক্ষেত্রে এটি ব্যবহার করা হয় -->
+    <!-- label optional হিসেবে ব্যবহার করা হয়েছে এটি বাদ দিয়ে ও প্র্যাকটিস করা যাবে-->
+    <label for="okmyEvent1">onchange</label>
+    <input id="okmyEvent1" onchange="myEvent('onchange করা হয়েছে')"></input> <!-- input এ লেখা পরিবর্তন করলে -->
+    <br>
+    <label for="okmyEvent2">onkeydown</label>
+    <input id="okmyEvent2" onkeydown="myEvent('onkeydown করা হয়েছে')"></input> <!-- input এ লেখা শুরু করলে -->
+    <br>
+    <label for="okmyEvent3">onkeyup</label>
+    <input id="okmyEvent3" onkeyup="myEvent('onkeyup করা হয়েছে')"></input> <!-- input এ লেখা শেষ করে মাউস উঠিয়ে নিলে -->
+    
+    <script>
+        function myEvent (msg) {
+            console.log (msg);
+        }
+        // Learn More: https://www.w3schools.com/js/js_events.asp
+    </script>
+</body>
+</html>
