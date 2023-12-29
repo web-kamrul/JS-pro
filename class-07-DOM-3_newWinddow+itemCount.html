@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practicing</title>
+</head>
+<body>
+
+    <!-- Counting tags -->
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <!-- এই button ক্লিক করলে আউটপুট দেখা যাবে -->
+    <button onclick="Demo()">Open New Window</button>
+    <button onclick="Demo1()">How many P tag</button>
+
+    <script>
+        // Open New Window and give a text
+        function Demo() {
+            let kamrul = window.open();
+            kamrul.document.open();
+            kamrul.document.write("Are you finding Me?");
+            kamrul.document.close();
+        }
+
+        // Counting tags
+        function Demo1() {
+            let MyItems= document.getElementsByTagName ('p');
+            let ItemCount=MyItems.length;
+            alert (ItemCount);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practicing</title>
+</head>
+<body>
+
+    <!-- এই p ট্যাগগুলোর ভিতরেই রেজাল্ট শো করাবো -->
+    <p></p> <!-- cookie -->
+    <p></p> <!-- domain -->
+    <p></p> <!-- URL -->
+    <p></p> <!-- Last Modified -->
+    <p></p> <!-- Title -->
+    <p></p> <!-- Replace -->
+    
+    <!-- এই button গুলোর উপরে ক্লিক করলে আউটপুট দেখা যাবে -->
+    <button onclick="Demo1()">cookie</button>
+    <button onclick="Demo2()">domain</button>
+    <button onclick="Demo3()">URL</button>
+    <button onclick="Demo4()">Last Modified</button>
+    <button onclick="Demo5()">Title</button>
+    <button onclick="Demo6()">Replace</button>
+
+    <script>
+        // Cookie
+        function Demo1 () {
+            var kamrul = document.cookie;
+            document.getElementsByTagName ('p')[0].innerHTML = kamrul;
+        }
+        // Domain 
+        function Demo2 () {
+            var kamrul = document.domain;
+            document.getElementsByTagName ('p')[1].innerHTML = kamrul;
+        }
+        // URL 
+        function Demo3 () {
+            var kamrul = document.URL;
+            document.getElementsByTagName ('p')[2].innerHTML = kamrul;
+        }
+        // lastModified 
+        function Demo4 () {
+            var kamrul = document.lastModified;
+            document.getElementsByTagName ('p')[2].innerHTML = kamrul;
+        }
+        // title 
+        function Demo5 () {
+            var kamrul = document.title;
+            document.getElementsByTagName ('p')[2].innerHTML = kamrul;
+        }
+        // replace 
+        function Demo6 () {
+            document.open ("text/html", "replace");
+            document.write ("We are replacing the text");
+            document.close();
+        }
+    </script>
+</body>
+</html>
