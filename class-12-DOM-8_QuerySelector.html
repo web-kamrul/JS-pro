@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kamrul h1</h1>
+    <h2 id="myID">Kamrul h2</h2>
+    <h3 class="myClass">Kmarul h3</h3>
+    <p name="myName">Lorem ipsum dolor sit amet.</p>
+    <button onclick="changeNow()">Change Now</button>
+
+    <script>
+        function changeNow () {
+            document.querySelector("h1").innerHTML = "Kamrul h1 Manupulated"
+            document.querySelector("#myID").innerHTML = "Kamrul h2 Manupulated"
+            document.querySelector(".myClass").innerHTML = "Kamrul h3 Manupulated"
+            document.querySelector('p[name="myName"]').innerHTML = "Lorem ipsum dolor sit amet. Manupulated"
+            // Learn More: https://www.w3schools.com/jsref/met_document_queryselector.asp
+            
+        }
+    </script>
+</body>
+</html>
