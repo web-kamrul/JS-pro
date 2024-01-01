@@ -21,7 +21,7 @@
     <button onclick="Demo1()">How many P tag</button>
 
     <script>
-        // Open New Window and give a text
+        // Open A New Window and give a text
         function Demo() {
             let kamrul = window.open();
             kamrul.document.open();
@@ -33,7 +33,8 @@
         function Demo1() {
             let MyItems= document.getElementsByTagName ('p');
             let ItemCount=MyItems.length;
-            alert (ItemCount);
+            document.write (ItemCount);
+            // alert (ItemCount);
         }
     </script>
 </body>

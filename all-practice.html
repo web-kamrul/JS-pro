@@ -9,18 +9,13 @@
     <h1 id="myID">Hellow World</h1>
     <h1 class="myClass">Hellow World</h1>
     <button onclick="ok()">Change Now</button>
-    <button onclick="ready()">Change Now</button>
-
+    
     <script>
         function ok() {
-            var anyThing = document.getElementById ('myID')
-            anyThing.innerHTML = 'Changed'
-        }
-
-        function ready() {
-            var anyThing = document.getElementsByClassName ('myClass')
-            anyThing.innerHTML = 'Changed'
+            document.querySelector ('#myID').innerHTML = "kamrul"
+            document.querySelector (".myClass").innerHTML = "suhana"
         }
     </script>
+
 </body>
 </html>
