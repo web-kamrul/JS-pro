@@ -6,27 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="ami">
-        <div class="tumi">
-            <div class="inneer"></div>
-        </div>
-    </div>
-    <h1 class="safe-hero1">Hidden Text</h1>
-    <h2 class="safe-hero2">Hidden Text</h2>
-    <h2 class="safe-hero2">Hidden Text</h2>
-    <h2 class="safe-hero2">Hidden Text</h2>
-    <h3 class="safe-hero3">Hidden Text</h3>
-    <h3 class="safe-hero3">Hidden Text</h3>
-    <h3 class="safe-hero3">Hidden Text</h3>
-    <h3 class="safe-hero3">Hidden Text</h3>
+    <h1 id="myID">Hellow World</h1>
+    <h1 class="myClass">Hellow World</h1>
+    <button onclick="ok()">Change Now</button>
+    <button onclick="ready()">Change Now</button>
+
     <script>
-        var newYear = document.getElementsByClassName ('safe-hero2');
-        newYear[1].innerHTML = "Lorem impsum is a dolar sit ammet";
+        function ok() {
+            var anyThing = document.getElementById ('myID')
+            anyThing.innerHTML = 'Changed'
+        }
 
-        var kamrulTag = document.getElementsByTagName ('h3')
-        kamrulTag[2].innerHTML = "Lorem impsum is a dolar sit ammet";
-        
-
+        function ready() {
+            var anyThing = document.getElementsByClassName ('myClass')
+            anyThing.innerHTML = 'Changed'
+        }
     </script>
 </body>
 </html>
