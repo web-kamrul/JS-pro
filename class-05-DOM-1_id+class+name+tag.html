@@ -6,43 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="ownID">ok</h1>
-    <h2 class="ownClass">ok</h2>
-    <h2 class="ownClass">ok</h2>
-    <button class="ownClass">ok</button>
-    <br>
-    <br>
-    <button name ="ownName">Name</button>
-    <button name ="ownName">Name</button>
-    <button name ="ownName">Name</button>
-    <br>
-    <br>
-    <p>Lorem ipsum dolor sit amet.</p>
-    <p>Lorem ipsum dolor sit amet.</p>
-    <p>Lorem ipsum dolor sit amet.</p>
-
+    <h1 id="myID">Hello</h1>
+    <h1 class="myClass">Hello</h1>
+    <h1 name="myName">Hello</h1>
+    <h2>We</h2>
+    <h2>We</h2>
+    <h2>We</h2>
+    <h2>We</h2>
+    
     <script>
 
-        // DOM ব্যবহার করে আমারা HTML এর যে কোনো কন্টেন্টই পরিবর্তন করে দিতে পারি
+        // Id ব্যতীত অন্য class, name, Tag এর ক্ষেত্রে var এর নামের পর index নাম্বার বলে দিতে হবে  
+        
+        var anyThing = document.getElementById ('myID')
+        anyThing.innerHTML = 'Changed'
 
-        // ID ধরে পরিবর্তন করা হয়েছে
-        // ID কেবলমাত্র একবারই ব্যবহার করা যাবে
-        var amarContent = document.getElementById('ownID');
-        amarContent.innerHTML = "EID Mubarok"
+        var anyThing = document.getElementsByClassName ('myClass')
+        anyThing[0].innerHTML = 'Changed'
 
-        // Class ধরে পরিবর্তন করা হয়েছে
-        // একই Class একাধিক জায়গায় থাকলে তার index Number দিয়ে সেটি ধরতে হবে নাহলে querySelector Use করে আলাদাভাবে ধরা যাবে
-        var amarContent = document.getElementsByClassName('ownClass');
-        amarContent[1].innerHTML = "EID Mubarok"
+        var anyThing = document.getElementsByName ('myName')
+        anyThing[0].innerHTML = 'Changed'
 
-        // name ধরে পরিবর্তন করা হয়েছে
-        var amarContent = document.getElementsByName('ownName');
-        amarContent[0].innerHTML = "Change the button Text"
-
-        // Tag ধরে পরিবর্তন করা হয়েছে
-        var amarContent = document.getElementsByTagName('p');
-        amarContent[0].innerHTML = "Changed"
-
+        var anyThing = document.getElementsByTagName ('h2')
+        anyThing[0].innerHTML = 'Changed'
 
     </script>
 </body>
