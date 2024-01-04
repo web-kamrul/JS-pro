@@ -6,16 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="ExcGetRequest()">Get Result</button>
+
+    <!-- AJAX এর সাহায্যে অন্য যে কোনো জায়গা থেকে ডাটা নিয়ে আসতে পারি Json আকারে  -->
+
+    <button onclick="getMyData()">Get Result</button>
+    <p id="a"></p>
+    <p id="b"></p>
+
     <script>
-        function ExcGetRequest() {
-            var URL = "https://crud.teamrabbil.com/api/v1/ReadProduct";
-            var Configuration = {method:"GET"}
+        async function getMyData() {
+
+            // call the 3rd party Data in page
+            let URL = "https://crud.teamrabbil.com/api/v1/ReadProduct"
+            let kamrulResult = await fetch (URL)
+            let kamrulJsonObj = await kamrulResult.json()
+
+            // to get result and show
+            document.getElementById("a").innerHTML=kamrulJsonObj ['status']
             
-            fetch (URL, Configuration)
-            .then (Response=>Response.json())
-            .then (Result=>console.log(Result))
-            .catch (err=> console.log(err))
+            // এভাবে লিখলে এটি শুধু [object Object],[object Object] আকারে আসবে তাই সরাসরি string এ দেখতে হলে
+            document.getElementById("b").innerHTML=kamrulJsonObj ['data'] // কে
+            document.getElementById("b").innerHTML=JSON.stringify (kamrulJsonObj ['data']) // data কে string আকারে দেখাবে
         }
     </script>
 </body>
