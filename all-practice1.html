@@ -13,8 +13,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <form class="form-control">
-
+        <div class="form-control">
             <label for="amarNam">Enter Your Name</label>
             <input type="text" id="amarNam" class="w-100">
 
@@ -31,8 +30,7 @@
             <input type="text" id="amarGPA" class="w-100">
 
             <button type="submit" id="summitForm" class="btn btn-success mt-3 w-100" onclick="SafeSyntax()">Submit Your Form</button>
-
-        </form>
+        </div>
 
         <table id="outputTable" class="table">
             <thead>
@@ -52,21 +50,21 @@
 
     <script>
         function SafeSyntax() {
-            var a = document.getElementById ('amarNam').value
-            var b = document.getElementById ('amarSchool').value
-            var c = document.getElementById ('amarID').value
-            var d = document.getElementById ('amarEmail').value
-            var e = document.getElementById ('amarGPA').value
+            var a = document.getElementById('amarNam').value
+            var b = document.getElementById('amarSchool').value
+            var c = document.getElementById('amarID').value
+            var d = document.getElementById('amarEmail').value
+            var e = document.getElementById('amarGPA').value
 
-            var amartable = document.getElementById ('outputTable').getElementsByTagName('tbody')[0]
+            var amartable = document.getElementById('outputTable').getElementsByTagName('tbody')[0]
 
-            var amarNewRow = amartable.insertRow (0)
+            var amarNewRow = amartable.insertRow(0)
 
-            var hellocell1 = amarNewRow.insertCell (0)
-            var hellocell2 = amarNewRow.insertCell (1)
-            var hellocell3 = amarNewRow.insertCell (2)
-            var hellocell4 = amarNewRow.insertCell (3)
-            var hellocell5 = amarNewRow.insertCell (4)
+            var hellocell1 = amarNewRow.insertCell(0)
+            var hellocell2 = amarNewRow.insertCell(1)
+            var hellocell3 = amarNewRow.insertCell(2)
+            var hellocell4 = amarNewRow.insertCell(3)
+            var hellocell5 = amarNewRow.insertCell(4)
 
             hellocell1.innerHTML = a
             hellocell2.innerHTML = b
